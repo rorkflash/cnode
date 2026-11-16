@@ -1,0 +1,28 @@
+{
+  "protocol_version": "0.1",
+  "command_id": "cmd-demo-001",
+  "kind": "assign",
+  "runner_id": "runner-demo-b",
+  "project_id": "project-demo",
+  "task_id": "task-demo-001",
+  "task_revision": 1,
+  "run_id": "run-demo-001",
+  "worker_id": "worker-demo-impl",
+  "lease_epoch": 1,
+  "role_generation": null,
+  "issued_at": "2026-11-15T12:00:00Z",
+  "expires_at": "2026-11-15T12:01:00Z",
+  "lease_expires_at": "2026-11-15T12:02:00Z",
+  "deadline": "2026-11-15T12:30:00Z",
+  "context_manifest_ref": "artifact://demo-context",
+  "package_lock_ref": "artifact://demo-packages",
+  "execution_policy_ref": "artifact://demo-policy",
+  "workspace": {
+    "mode": "git_bundle",
+    "repository_id": "repo-demo",
+    "base_commit_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "task_ref": "refs/heads/anode/task-demo-001",
+    "target_ref": "refs/heads/main",
+    "source_artifact_ref": "artifact://demo-source"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "protocol_version": "0.1",
+  "event_id": "evt-demo-002",
+  "run_id": "run-demo-001",
+  "lease_epoch": 1,
+  "sequence": 2,
+  "happened_at": "2026-11-15T12:00:55Z",
+  "type": "run.result_submitted",
+  "payload": {
+    "outcome_status": "completed",
+    "summary": "Added a parser fixture and corrected empty-input handling.",
+    "takeaways": [
+      "Empty input now returns a typed empty result."
+    ],
+    "evidence_refs": [
+      "artifact://demo-tests"
+    ],
+    "question_refs": [],
+    "usage_refs": [],
+    "submission": {
+      "repository_id": "repo-demo",
+      "base_commit_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "result_commit_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "artifact_ref": "artifact://demo-change",
+      "format": "git_bundle"
+    }
+  }
+}
