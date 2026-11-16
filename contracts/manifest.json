@@ -1,0 +1,14 @@
+{
+  "protocol_version": "0.1",
+  "status": "draft",
+  "canonical_repository": "anode",
+  "files": {
+    "docs/protocol.md": "e8e9c67fcb9a93ca1f27359e0e5b9a3c1f07cc4b2c4f5d568141d41830e71fce",
+    "contracts/0.1/EXAMPLES.md": "a5e02972b2ff54163a4fcfa6b2d2294cf55aed0df0da8466c32583db7b42e524",
+    "contracts/0.1/assignment.schema.json": "b55c838d2260dd6203a48314666c354db2239b4570f7f71e846a1064a67e1a44",
+    "contracts/0.1/event.schema.json": "42c561ba40e9a194e906ffb03b50cd11de4e44ca0272244dc6e8d5c756641d03",
+    "contracts/0.1/examples/assignment.json": "f5165ba91b0217195cca2161ff1d491c2ce038b6e47b66dbbbd7638bcaeb6b75",
+    "contracts/0.1/examples/run-result.json": "c04e51efb992a00ebc731466af51ea299d87b8f3691b93ffebd8436a203d42d2",
+    "contracts/0.1/examples/run-started.json": "3336761582e785b407b4e8a85e1b0da0a9206a185d8f889d1a33437966189707"
+  }
+}

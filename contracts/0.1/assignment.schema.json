@@ -1,0 +1,192 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Anode Cnode assignment draft 0.1",
+  "type": "object",
+  "properties": {
+    "protocol_version": {
+      "const": "0.1"
+    },
+    "command_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "const": "assign"
+    },
+    "runner_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "project_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "worker_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lease_epoch": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "role_generation": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1
+    },
+    "issued_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "lease_expires_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "deadline": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "context_manifest_ref": {
+      "type": "string",
+      "pattern": "^artifact://[^\\s]+$"
+    },
+    "package_lock_ref": {
+      "type": "string",
+      "pattern": "^artifact://[^\\s]+$"
+    },
+    "execution_policy_ref": {
+      "type": "string",
+      "pattern": "^artifact://[^\\s]+$"
+    },
+    "workspace": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "const": "none"
+            }
+          },
+          "required": [
+            "mode"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "const": "git_bundle"
+            },
+            "repository_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "base_commit_sha": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}([0-9a-f]{24})?$"
+            },
+            "task_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "target_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "source_artifact_ref": {
+              "type": "string",
+              "pattern": "^artifact://[^\\s]+$"
+            }
+          },
+          "required": [
+            "mode",
+            "repository_id",
+            "base_commit_sha",
+            "task_ref",
+            "target_ref",
+            "source_artifact_ref"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "const": "authorized_clone"
+            },
+            "repository_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "base_commit_sha": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}([0-9a-f]{24})?$"
+            },
+            "task_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "target_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "credential_binding_ref": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "mode",
+            "repository_id",
+            "base_commit_sha",
+            "task_ref",
+            "target_ref",
+            "credential_binding_ref"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    }
+  },
+  "required": [
+    "protocol_version",
+    "command_id",
+    "kind",
+    "runner_id",
+    "project_id",
+    "task_id",
+    "task_revision",
+    "run_id",
+    "worker_id",
+    "lease_epoch",
+    "role_generation",
+    "issued_at",
+    "expires_at",
+    "lease_expires_at",
+    "deadline",
+    "context_manifest_ref",
+    "package_lock_ref",
+    "execution_policy_ref",
+    "workspace"
+  ],
+  "additionalProperties": false
+}

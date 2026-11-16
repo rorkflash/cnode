@@ -1,0 +1,14 @@
+{
+  "protocol_version": "0.1",
+  "event_id": "evt-demo-001",
+  "run_id": "run-demo-001",
+  "lease_epoch": 1,
+  "sequence": 1,
+  "happened_at": "2026-11-15T12:00:10Z",
+  "type": "run.started",
+  "payload": {
+    "adapter_id": "fake",
+    "adapter_version": "0.1.0",
+    "session_ref": null
+  }
+}

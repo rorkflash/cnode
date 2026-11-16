@@ -1,0 +1,27 @@
+# PROPOSED FORMAT ONLY. No config parser exists in this documentation starter.
+profile: local
+anode:
+  origin: http://127.0.0.1:7840
+  supported_protocols: ["0.1"]
+  credential_store: os_keychain
+  transport: long_poll
+runner:
+  max_concurrent_runs: 1
+  accept_new_work: false
+  keep_awake: false
+paths:
+  state_root: ./var/state
+  workspace_root: ./var/workspaces
+  artifact_root: ./var/artifacts
+policy:
+  allowed_project_ids: []
+  external_jobs_enabled: false
+  arbitrary_executable_packages: false
+  default_network_access: deny
+  max_run_seconds: 1800
+talo:
+  enabled: false
+  lifecycle: attach
+  socket_path: null
+adapters: []
+# Populate adapters only after capability verification; never insert tokens here.
